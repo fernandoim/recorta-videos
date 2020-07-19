@@ -2,8 +2,8 @@
 Conjunto de funciones para recortar automáticamente vídeos. 
 - recorta
 - extrae
-- dispersa
 - rafaga
+- dispersa
 - trocea
 
 Y funciones auxiliares para trabajar con el minutaje:
@@ -50,3 +50,27 @@ Para evitar que haya varios vídeos con el nombre repetido, los vídeos se numer
 
 #### recorta
 Extrae un único corte de vídeo de una cantidad aleatoria de segundos (por defecto, entre 3 y 10 segundos) desde el minutaje indicado como comienzo. 
+
+`recorta $video $inicio` 
+
+#### extrae
+Extrae un único corte de vídeo entre el punto de comienzo y el punto de final indicado. 
+
+`extrae $video $inicio $final`
+
+#### rafaga 
+Genera una serie de cortes de una cantidad aleatoria de segundos (por defecto, entre 3 y 10 segundos) desde el minutaje indicado como comienzo hasta el minutaje indicado como final guardando, de forma aleatoria, unos sí y otros no. 
+
+`rafaga $video $inicio $final`
+
+#### dispersa
+Genera una serie de cortes de una cantidad aleatoria de segundos (por defecto, entre 3 y 10 segundos) desde el minutaje indicado como comienzo hasta el minutaje indicado como final dejando sin extraer otras partes del vídeo (por defecto, las partes que no se recortan son de entre 10 y 30 segundos y con una mayor posibilidad de no extraer que de sí estraer, habiendo el doble de posiblilidades de no extraer un corte que de que sí se extraiga).
+
+`dispersa $video $inicio $final`
+
+#### trocea
+
+Genera una serie de cortes del vídeo entre los puntos de corte indicados. Opcionalmente, se le puede indicar el número de segundos que debe dejar entre un corte y el siguiente con la opción `t $numero_de_segundos`. 
+
+`trocea $video $inicio $corte2 $corte3 $corte4 $final`
+`trocea t $segundos_entre_corte_y_corte $video $corte2 $corte3 $corte4 $inicio $final`
