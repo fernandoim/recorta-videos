@@ -72,5 +72,5 @@ Genera una serie de cortes de una cantidad aleatoria de segundos (por defecto, e
 
 Genera una serie de cortes del vídeo entre los puntos de corte indicados. Opcionalmente, se le puede indicar el número de segundos que debe dejar entre un corte y el siguiente con la opción `t $numero_de_segundos`. 
 
-`trocea $video $inicio $corte2 $corte3 $corte4 $final`
+`trocea $video $inicio $corte2 $corte3 $corte4 $final`  
 `trocea t $segundos_entre_corte_y_corte $video $corte2 $corte3 $corte4 $inicio $final`
