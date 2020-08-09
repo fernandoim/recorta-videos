@@ -17,7 +17,7 @@ function muestraayuda() {
   echo ""
 }
 
-. compruebaminutaje.sh
+
 
 function minutajeasegundos(){
   tiempohoras=$(echo ${1:0:2})
@@ -40,6 +40,8 @@ else
   then
     muestraayuda
   else
+
+    . compruebaminutaje.sh
     minutaje=$(compruebaminutaje $1)
     minutajeasegundos $minutaje
   fi
